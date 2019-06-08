@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+
+</head>
+
+
+
+<body data-smooth-scroll-offset="77">
+<div class="nav-container">
+    <div>
+        <nav class="bar bar-toggle">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="bar__module">
+                            <a href="#"> <img class="logo" style="height: 40%" alt="logo" src="img/demos/claudiadanciu_light.png">  </a>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <div class="bar__module">
+                            <div class="modal-instance pull-right">
+                                <a class="modal-trigger menu-toggle" href="#"> <i class="stack-interface stack-menu"></i> </a>
+                                <div class="modal-container menu-fullscreen">
+                                    <div class="modal-content" data-width="100%" data-height="100%">
+                                        <div class="pos-vertical-center pos-asbolute text-center">
+                                            <div class="heading-block"> <img alt="Image" class="logo image--xs" src="img/demos/claudiadanciu_dark.png">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="main-container">
+    <section class="switchable feature-large switchable--switch">
+        <div class="container">
+            <div class="row justify-content-around">
+
+                <div class="col-lg-5 col-md-6 switchable__text">
+                    <h2>Hi, let's play a game</h2>
+                    <p class="lead"> Launching an attractive and scalable game quickly and affordable is important for modern world</p>
+
+                    <script>
+                        function game(mama){
+                            var user = mama;
+
+                            var computer = Math.random();
+                            if (computer < 0.34) {
+                                computer = "Rock";
+                            } else if(computer <= 0.67) {
+                                computer = "Paper";
+                            } else {
+                                computer = "Scissors";
+                            }
+
+                            // Compare user choice vs computer choice
+                            var compare = function(choice1,choice2) {
+                                if (choice1 === choice2) {
+                                    return "It’s a tie!";
+                                }
+                                if (choice1 === "Rock") {
+                                    if (choice2 === "Scissors") {
+                                        // rock wins
+                                        return "You win!";
+                                    } else {
+                                        // paper wins
+                                        return "You lose! Try again.";
+                                    }
+                                }
+                                if (choice1 === "Paper") {
+                                    if (choice2 === "Rock") {
+                                        // paper wins
+                                        return "You win!";
+                                    } else {
+                                        // scissors wins
+                                        return "You lose! Try again.";
+                                    }
+                                }
+                                if (choice1 === "Scissors") {
+                                    if (choice2 === "Rock") {
+                                        // rock wins
+                                        return "You lose! Try again.";
+                                    } else {
+                                        // scissors wins
+                                        return "You win!";
+                                    }
+                                }
+                            };
+                            // Run the compare function
+                            var result = compare(user,computer);
+
+                            document.getElementById("computer").innerHTML = "Computer selected:" + " " + computer;
+                            document.getElementById("source").innerHTML = "You've selected:" + " " + user;
+                            document.getElementById("result").innerHTML = result;
+                        }
+
+                    </script>
+                    <div style="align-items: flex-start">
+                        <img src="img/rock.svg" id="rock" class="image--xs icon-Bacteria color--primary " onclick="game('Rock')"/>
+                        <img src="img/paper.svg" id="paper" class="image--xs  color--primary " onclick="game('Paper')"/>
+                        <img src="img/scissors.svg" id="scissors" class="image--xs color--primary " onclick="game('Scissors')"/>
+
+                    </div>
+                    <div class="lead">
+                        <span id="computer"></span><br/>
+                        <span id="source"></span>
+                        <h3 id="result"></h3>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="boxed boxed--lg boxed--border box-shadow-wide">
+                        <div class="slider" data-paging="true">
+                            <ul class="slides">
+                                <li class="col-12">
+                                    <div class="feature feature-3 text-center"> <img class="icon  icon--lg  color--primary"/>
+                                        <h4>How does it work?</h4>
+                                        <p> The person that plays the strongest “object” is the winner of the game. It's that easy! </p> <a href="#">
+                                            Learn More
+                                        </a> </div>
+                                </li>
+                                <li class="col-12">
+                                    <div class="feature feature-3 text-center"> <img src="img/rock.svg" class="icon image--xs  color--primary"/>
+                                        <h4>Rock</h4>
+                                        <p> To play “rock,” simply ball your hand up into a fist when you and your opponent shoot. Rock beats scissors, but loses to paper. </p> <a href="#">
+                                            Learn More
+                                        </a> </div>
+                                </li>
+                                <li class="col-12">
+                                    <div class="feature feature-3 text-center"> <img src="img/paper.svg" class="icon image--xs color--primary"/>
+                                        <h4>Paper</h4>
+                                        <p> Throw “paper” by extending your hand palm down with your fingers outstretched. Paper wins against rock, but loses to scissors. </p> <a href="#">
+                                            Learn More
+                                        </a> </div>
+                                </li>
+                                <li class="col-12">
+                                    <div class="feature feature-3 text-center"> <img src="img/scissors.svg" class="icon image--xs  color--primary"/>
+                                        <h4>Scissors</h4>
+                                        <p> For "scissors," use two fingers to mimic the shape of an open pair of scissors. Scissors has an advantage over paper but can be beat by rock.</p> <a href="#">
+                                            Learn More
+                                        </a> </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1">
+        <div class="container">
+            <div class="cta cta--horizontal text-center-xs row">
+                <div class="col-md-4">
+                    <h4>Let's get you started</h4>
+                </div>
+                <div class="col-md-5">
+                    <p class="lead"> Let's create a game! </p>
+                </div>
+                <div class="col-md-3 text-right text-center-xs">
+                    <a class="btn btn--primary type--uppercase" href="#"> <span class="btn__text">
+                        Contact me</span> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-3 text-center-xs space--xs bg--dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6"> <img alt="Image" class="logo"  src="img/demos/claudiadanciu_dark.png">
+                    <ul class="list-inline list--hover">
+
+                        <li> <a href="#"><span class="type--fine-print">Get Started</span></a> </li>
+                        <li> <a href="#"><span class="type--fine-print">contact@claudiadanciu.com</span></a> </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="type--fine-print"> </p>
+                </div>
+                <div class="col-sm-6 text-right text-center-xs"> <span class="type--fine-print"><span class="update-year"></span></span> <a class="type--fine-print" href="#">Privacy Policy</a> <a class="type--fine-print" href="#">Legal</a> </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/flickity.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/granim.min.js"></script>
+<script src="js/smooth-scroll.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+
+</html>

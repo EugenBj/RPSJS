@@ -1,0 +1,19 @@
+<?php
+include "Functions.php";
+echo "Rock, paper, scissors:\n";
+$continue = true;
+while ($continue){
+    $userChoice = getUserTurn();
+    $userValidMove = convertToUserValidTurn($userChoice);
+    $computerChoice = rand(0, 2);
+    $computerValidMove = convertToComputerValidMove($computerChoice); 
+    $winner = compareMoves($userValidMove, $computerValidMove);
+    echo "\n". $winner. "\n\n";
+    echo "Do you want to play again? Y/N\n";
+    $playagain = strtoupper ( stream_get_line(STDIN, 2, "\n"));
+    if ($playagain == "N") {
+        $continue = false;
+        
+    };
+}
+echo 'Game Over.';

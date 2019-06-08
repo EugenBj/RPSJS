@@ -1,0 +1,5 @@
+/*! Place y
+our custom styles here */
+#rock, #paper, #scissors {
+    align-self:flex-start;
+}
